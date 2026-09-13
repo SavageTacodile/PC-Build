@@ -1,0 +1,177 @@
+ 
+
+
+:root {
+    --background: #d9d9d9;
+    --placeholder: #6e6e6e;
+    --light-placeholder: #595959;
+    --header: #6e6e6e;
+    --footer: #b3b3b3;
+    /*removed useless color */
+    --light-text: #f2f2f2;
+--darktext: #1a1a1a;
+}
+* {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background: var(--background);
+    color: var(--darktext);
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    width: 1000px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    overflow: auto;
+}
+/* ghead */
+#header {
+    background: #6e6e6e;
+    color: var(--light-text);
+    text-align: center;
+    padding: 22px;
+    font-size: 32px;
+    font-weight:800;
+    font-family: Georgia, 'Times New Roman', serif; /* need to find new fonts*/
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+}
+#header h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 800;
+    font-family: Georgia, 'Times New Roman', serif;
+    letter-spacing: 0.5px;
+}
+/*home page pictures*/
+.homephotos {
+    overflow: auto;
+    padding: 20px 0px;
+    text-align: center;
+}
+.homephotos .photo {
+    background: var(--placeholder);
+    color: var(--darktext);
+    width: 290px;
+    height: 380px;
+    border-radius: 6px;
+    float: left;
+    margin: 15px;
+    padding: 20px;
+    border: 1px solid black;/*do i like borders? */
+    display: inline-block;
+    text-align: center;
+}
+/*components*/
+.components .component {
+    background: var(--placeholder);
+    color: var(--light-text);
+    width: 215px;
+    height: 215px;
+    margin: 10px;
+    float: left;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 20px;
+    padding: 16px;
+}
+/* assembly */
+.assemblylayout {
+    overflow: auto;
+}
+.assemblytext {
+    background: var(--placeholder);
+    color: var(--light-text);
+    width: 55%;
+    float: left;
+    min-height: 640px;
+    padding: 30px;
+    font-size: 18px;
+    line-height: 1.6;
+    border-radius: 4px;
+}
+.assemblytext .tips {
+    margin-top: 40px;
+}
+.assemblyimages {
+    width: 40%;
+    float: right;
+}
+.assemblyimages .image {
+    background: var(--placeholder);
+    color: var(--light-text);
+    min-height: 145px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    text-align: center;
+    padding: 20px;
+    font-size: 17px;
+}
+/*troubleshooting*/
+.issues {
+    overflow: auto;
+    padding: 10px 0px;
+}
+.btn {
+    background: var(--light-placeholder);
+    color: var(--light-text);
+    border: none;
+    border-radius: 8px;
+    padding: 16px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    width: 180px;
+    margin: 8px;
+    float: left;
+}
+.btn:hover {
+    background: #4a4a4a;
+}
+.issuedetails {
+    background: var(--placeholder);
+    color: var(--light-text);
+    clear: both;
+    margin-top: 20px;
+    min-height: 180px;
+    border-radius: 6px;
+    text-align: center;
+    padding: 40px;
+    font-size: 19px;
+    line-height: 1.6;
+}
+#footer {
+    background: var(--footer);
+    text-align: center;
+    padding: 18px 32px;
+    margin-top: 30px;
+    clear: both;
+    font-size: 14px;
+}
+#footer p {
+    margin: 5px 0px;
+}
+#footer a {
+    color: var(--darktext);
+    text-decoration: none;
+    margin-left: 6px;
+    margin-right: 6px;
+    font-size: 18px;
+}
+#footer a:hover {
+    text-decoration: underline;
+    color: blue; /*may change later*/
+}
+#footer a.active {
+    font-weight: 700;
+}
