@@ -10,8 +10,8 @@
 <div id="header">
     <a href="index.html">
         <img src="logo.png" alt="PC Building Guide logo">
-        <h1>Maintenance</h1>
     </a>
+    <h1>Maintenance</h1>
 </div>
 
 <div id="wrapper">
@@ -46,6 +46,7 @@
 </div>
 
 <script>
+    
 function showMaintenance(topic) {
     var maintenanceBox = document.getElementById("maintenance-box");
 
@@ -53,17 +54,21 @@ function showMaintenance(topic) {
         maintenanceBox.innerHTML = `
             <h2>Cleaning Your PC</h2>
 
-            <p>If you don't clean out dust inside your computer regularly, it can cause your fans to work harder to keep your components cooled down. 
+            <p>
+            If you don't clean out dust inside your computer regularly, it can cause your fans to work harder to keep your components cooled down. 
             </p>
 
             <ul>
                 <li>Turn off and unplug your PC.</li>
-                <li>Use compressed air to blow out the dust from vents, fans, and all the components(IMPORTANT: DO NOT LET THE AIR SPIN THE FANS. HOLD THE BLADES WITH YOUR FINGER BEFORE BLOWING DUST).</li>
+                <li>
+                Use compressed air to blow out the dust from vents, fans, and all the components(IMPORTANT: DO NOT LET THE AIR SPIN THE FANS. HOLD THE BLADES WITH YOUR FINGER BEFORE BLOWING DUST).
+                </li>
                 <li>Clean the dust filters on the chassis if you have any.</li>
                 <li>Do not use a vacuum.</li>
             </ul>
         `;
     }
+        
     else if (topic == "temperatures") {
         maintenanceBox.innerHTML = `
             <h2>Checking Temperatures</h2>
@@ -73,7 +78,7 @@ function showMaintenance(topic) {
             </p>
 
             <p>
-                Use a monitoring tool such as hwinfo to check your CPU and GPU temperatures while idle and under load.
+                Use a monitoring tool such as HWiNFO to check your CPU and GPU temperatures while idle and under load.
             </p>
         `;
     }
