@@ -172,3 +172,40 @@ body {
 #footer a.active {
     font-weight: 700;
 }
+
+.maintenance-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.maintenance-buttons button {
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#maintenance-box {
+    min-height: 350px;
+    padding: 25px;
+    border: 2px solid black;
+    background-color: white;
+    line-height: 1.6;
+}
+
+#maintenance-box h2 [
+    margin-top: 0;
+}
+
+#maintenance-box table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#maintenance-box th,
+#maintenance-box td {
+    padding: 10px;
+    text-align: left;
+}
+ 
