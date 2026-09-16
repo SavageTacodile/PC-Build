@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<title>PC Maintenance</title>
+</head>
+<body>
+<div id="header">
+    <center><h1>PC Maintenance</h1></center>
+</div>
+
+<div id="wrapper">
+
+    <div class="maintenance-buttons">
+        <button onclick="showMaintenance('cleaning')">Cleaning</button>
+        <button onclick="showMaintenance('temperatures')">Temperatures</button>
+        <button onclick="showMaintenance('updates')">Updates</button>
+        <button onclick="showMaintenance('thermal')">Thermal Paste</button>
+        <button onclick="showMaintenance('schedule')">Schedule</button>
+    </div>
+
+    <div id="maintenance-box">
+        <h2>PC Maintenance</h2>
+        <p>
+            Select a button to learn about things you can do to keep your PC maintained.
+        </p>
+    </div>
+</div>
+
+<hr>
+
+<div id="footer">
+    <p><b>PC Building Guide</b></p>
+    <p>
+        <a href="index.html">Home</a> |
+        <a href="components.html">Components</a> |
+        <a href="assembly.html">Assembly</a> |
+        <a href="maintenance.html" class="active">Maintenance</a> |
+        <a href="troubleshooting.html">Troubleshooting</a>
+    </p>
+</div>
+
+<script>
+function showMaintenance(topic) {
+    var maintenanceBox = document.getElementById("maintenance-box");
+
+    if (topic == "cleaning") {
+        maintenanceBox.innerHTML = `
+            <h2>Cleaning Your PC</h2>
+
+            <p>If you don't clean out dust inside your computer regularly, it can cause your fans to work harder to keep your components cooled down. 
+            </p>
+
+            <ul>
+                <li>Turn off and unplug your PC.</li>
+                <li>Use compressed air to blow out the dust from vents, fans, and all the components(IMPORTANT: DO NOT LET THE AIR SPIN THE FANS. HOLD THE BLADES WITH YOUR FINGER BEFORE BLOWING DUST).</li>
+                <li>Clean the dust filters on the chassis if you have any.</li>
+                <li>Do not use a vacuum.</li>
+            </ul>
+        `;
+    }
+    else if (topic == "temperatures") {
+        maintenanceBox.innerHTML = `
+            <h2>Checking Temperatures</h2>
+        
+            <p>
+                Checking your CPU and GPU temperatures can help you see if your computer is cooling well or not.
+            </p>
+
+            <p>
+                Use a monitoring tool such as hwinfo to check your CPU and GPU temperatures while idle and under load.
+            </p>
+        `;
+    }
+
+    else if (topic == "updates") {
+        maintenanceBox.innerHTML = `
+            <h2>Software and Driver Updates</h2>
+
+            <p>
+                It's crucial to keep Windows and your drivers updated to keep security, performance, and compatibility working efficiently.
+            </p>
+
+            <ul>
+                <li>Regularly check Windows Update</li>
+                <li>Keep your graphics card drivers updated.</li>
+                <li>Update your most used programs when you are notified of new releases.</li>
+                <li>Restart your computer when notified after updates.</li>
+            </ul>
+        `;
+    }
+
+    else if (topic == "thermal") {
+        maintenanceBox.innerHTML = `
+            <h2>Thermal Paste</h2>
+
+            <p>
+                Thermal paste can degrade over time. Personally, I replace mine once a year. If you're experiencing high temperatures after a long period of time, it may be time to reapply it(after cleaning the old paste off).
+            </p>
+        `;
+    }
+    
+    else if (topic == "schedule") {
+        maintenanceBox.innerHTML = `
+            <h2>Maintenance Schedule</h2>
+
+            <table border="1">
+                <tr>
+                    <th>Maintenance Task</th>
+                    <th>How Often</th>
+                </tr>
+
+                <tr>
+                    <td>Clean dust filters</td>
+                    <td>Every 1 to 2 months</td>
+                </tr>
+
+                <tr>
+                    <td>Clean inside the PC</td>
+                    <td>Every 3 to 6 months</td>
+                </tr>
+
+                <tr>
+                    <td>Check temperatures</td>
+                    <td>Every few months</td>
+                </tr>
+
+                <tr>
+                    <td>Check for software updates</td>
+                    <td>Monthly</td>
+                </tr>
+            </table>
+        `;
+    }
+}
+</script>
+</body>
+</html>
