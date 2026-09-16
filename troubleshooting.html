@@ -14,17 +14,26 @@
     <h1>Troubleshooting</h1>
 </div>
 <div id="wrapper">
+
+    <h2>Common PC Problems</h2>
+    
     <div class="issues">
-        <button class="btn">PC wont boot</button>
-        <button class="btn">No signal</button>
-        <button class="btn">Overheating</button>
+        <button class="btn" onclick="showIssue('boot')">PC won't boot</button>
+        <button class="btn" onclick="showIssue('signal')">No signal</button>
+        <button class="btn" onclick="showIssue('overheating')">Overheating</button>
         <!--fill in mmore buttons -->
     </div>
-    <div class="issuedetails">
-        Each button will have a common issue people may face when building their computer and a step by step solution to fix it. When you click a button, it will change this box to those instructions.
+    
+    <div class="issuedetails" id="issue-details">
+        <h2>Troubleshooting Guide</h2>
+
+        <p>
+            Select an issue above to see possible causes. I will also list steps you can take to solve them.
+        </p>
     </div>
 </div>
 <hr>
+    
 <div id="footer">
     <p><b>PC Building Guide</b></p>
     <p>
@@ -35,5 +44,73 @@
         <a href="troubleshooting.html" class="active">Troubleshooting</a>
     </p>
 </div>
+
+<script>
+
+function showIssue(issue) {
+
+    var issueDetails = document.getElementById("issue-details");
+
+    if (issue == "boot") {
+
+        issueDetails.innerHTML = `
+            <h2>PC Won't Boot</h2>
+
+            <p>
+                If your PC won't turn on, start with simple fixes first.
+            </p>
+
+            <ol>
+                <li>Check that the power cable is plugged into the power supply and the wall.</li>
+                <li>Check that the switch on the back of the power supply is set to on.</li>
+                <li>Make sure the 24-pin and CPU power cables are securely seated.</li>
+                <li>Make sure the case power button cable is placed correctly on the front panel header on the motherboard.</li>
+                <li>Check that the RAM is fully seated.</li>
+            </ol>
+        `;
+    }
+
+    else if (issue == "signal") {
+
+        issueDetails.innerHTML = `
+
+            <h2>No Signal</h2>
+
+            <p>
+                If the PC turns on but your monitor doesn't get any kind of signal:
+            </p>
+
+            <ol>
+                <li>Check that the monitor is using the correct input.</li>
+                <li>Make sure the HDMI/DP cable is plugged into the GPU.</li>
+                <li>Make sure the GPU is fully seated and power cables fully plugged in.</li>
+                <li>Make sure the RAM is fully seated.</li>
+            </ol>
+        `;
+    }
+
+    else if (issue == "overheating") {
+
+        issueDetails.innerHTML = `
+            <h2>Overheating</h2>
+
+            <p>
+                High temps are definitely concerning for a new build.
+            </p>
+
+            <ol>
+                <li>Check that all your fans are moving.</li>
+                <li>If you've had your PC for a while, check for an accumulation of dust.</li>
+                <li>Make sure the cooler is secured correctly on the CPU.</li>
+                <li>Check to see if you left the protective plastic on the CPU cooler.</li>
+                <li>Check that the CPU cooler cable is connected to the CPU_FAN header.</li>
+            </ol>
+        `;
+    }
+
+    
+                
+}
+</script>
 </body>
 </html>
