@@ -31,8 +31,8 @@ h2 {
 }
 
 #wrapper {
-    width: 1000px;
     width: 90%;
+    max-width: 1000px;
     margin: 0 auto;
     background: white;
     padding: 20px;
@@ -49,6 +49,7 @@ h2 {
     font-family: Georgia, 'Times New Roman', serif; /* need to find new fonts*/
     letter-spacing: 0.5px;
     margin-bottom: 20px;
+    overflow: auto;
 }
 #header h1 {
     margin: 0;
@@ -57,12 +58,29 @@ h2 {
     font-family: Georgia, 'Times New Roman', serif;
     letter-spacing: 0.5px;
 }
+
+#header img {
+    width: 100px;
+    height: auto;
+    float: left;
+    margin-right: 20px;
+}
 /*home page pictures*/
 .homephotos {
     overflow: auto;
     padding: 20px 0px;
     text-align: center;
 }
+
+.homephotos img {
+    width: 290px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin: 15px;
+    border: 1px solid black;
+}
+
 .homephotos .photo {
     background: var(--placeholder);
     color: var(--darktext);
