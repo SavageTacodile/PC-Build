@@ -14,18 +14,63 @@
     </a>
 </div>
 <div id="wrapper">
+    
+    <h2>PC Assembly Guide</h2>
+    
+    <p>
+        Select an image below to learn more about each step.
+    </p>
+
+
+    
     <div class="assemblylayout">
-        <div class="assemblytext">
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
-            </p>
-            <p class="tips">This will be where I type the instructions and tips I've learned from my own experience.</p>
-        </div>
+        
+        
         <div class="assemblyimages">
-            <div class="image">This is where I will have images based on where the person is in the instructions.</div>
-            <div class="image">This is where I will have images based on where the person is in the instructions.</div>
-            <div class="image">This is where I will have images based on where the person is in the instructions.</div>
-            <div class="image">This is where I will have images based on where the person is in the instructions.</div>
+
+            <img src="assembly1.jpg"
+            alt="CPU being installed in a motherboard"
+            class="assembly-image selected"
+            onclick="showAssembly('cpu', this)">
+
+            <img src="assembly2.jpg"
+            alt="RAM being installed in a motherboard"
+            class="assembly-image"
+            onclick="showAssembly('ram', this)">
+
+            <img src="assembly3.jpg"
+            alt="Motherboard being installed in a chassis"
+            class="assembly-image"
+            onclick="showAssembly('chassis', this)">
+
+            <img src="assembly4.jpg"
+            alt="GPU being installed in a motherboard"
+            class="assembly-image"
+            onclick="showAssembly('gpu', this)">
+
+            <img src="assembly5.jpg"
+            alt="Cables being connected in a motherboard"
+            class="assembly-image"
+            onclick="showAssembly('cables', this)">
+
+            <img src="assembly6.jpg"
+            alt="CPU cooler being installed on a motherboard"
+            class="assembly-image"
+            onclick="showAssembly('cooler', this)">
+
+
+
+
+            
+        </div>
+
+        <div id="assembly-details">
+
+            <h2>Installing the CPU</h2>
+
+            <p>
+                It's a good practice to place the motherboard on top of the motherboard's box to work on it. This protects the underside from scratches. Open the CPU socket and find the little arrow mark on the border of it. Line the same arrow mark on your CPU with the arrow mark on the socket. GENTLY drop the CPU in. Don't force it. You shouldn't ever have to push on a CPU. Once it's laying in completely flat, close the retention arm to secure it in the socket.
+            </p>
         </div>
     </div>
 </div>
@@ -40,5 +85,73 @@
         <a href="troubleshooting.html">Troubleshooting</a>
     </p>
 </div>
+
+<script>
+
+function showAssembly(step, selectedImage) {
+    var assemblyDetails = document.getElementById("assembly-details");
+    var images = document.getElementsByClassName("assembly-image");
+    for (var i = 0; i< images.length; i++) {
+        images[i].classList.remove("selected");
+    }
+    selectedImage.classList.add("selected");
+    if (step == "cpu") {
+        assemblyDetails.innerHTML = `
+            <h2>Installing the CPU</h2>
+            <p>
+                Before installing the CPU, look at your CPU cooler's instructions on mounting. You may have to do that first before anything else. It's a good practice to place the motherboard on top of the motherboard's box to work on it. This protects the underside from scratches. Open the CPU socket and find the little arrow mark on the border of it. Line the same arrow mark on your CPU with the arrow mark on the socket. GENTLY drop the CPU in. Don't force it. You shouldn't ever have to push on a CPU. Once it's laying in completely flat, close the retention arm to secure it in the socket.
+            </p>
+        `;
+    }
+
+    else if (step == "ram") {
+        assemblyDetails.innerHTML= `
+            <h2>Installing the RAM</h2>
+            <p>
+                Find the RAM slots on the motherboard. They are the vertical slots directly to the right of the CPU socket. Open the levers on them. You will see a notch inside the slots. Line this notch up with the notch on the RAM stick. Make sure it's actually lined up before pressing down. Once you are absolutely sure it's lined up, press down firmly on the top and bottom of the stick until it clicks into place.
+            </p>
+        `;
+    }
+
+    else if (step == "chassis") {
+        assemblyDetails.innerHTML = `
+            <h2>Installing the Motherboard</h2>
+            <p>
+                The first step is to make sure the motherboard standoffs in the chassis are in the correct position. Each standoff should match a screw hole on the edges of the motherboard. Your motherboard may have come with an I/O shield. A flat piece of metal that lines up with the rear ports on the motherboard. Place this into the rear of the case. Next, carefully lower the motherboard in the case and line it up with the standoffs. Use the provided screws to screw in the motherboard into the standoffs. Once your motherboard is in, I would take this time to connect your case cables to the motherboard before moving on to the GPU. Follow the instructions in your motherboard manual to get the right ones where they need to go.
+            </p>
+        `;
+    }
+
+    else if (step == "gpu") {
+        assemblyDetails.innerHTML = `
+            <h2>Installing the GPU</h2>
+            <p>
+                Find the main PCIe slot on the motherboard and remove the corresponding expansion slot covers from the back of the case. If you hold the GPU up like you're installing it into the motherboard, you'll easily see which of these to remove. After removing them, line up the GPU with the PCIe slot and press it down until it's fully seated. If you have to press too hard, it's not fully lined up. After it's seated, use screws to secure it.
+            </p>
+        `;
+    }
+
+    else if (step == "cables") {
+        assemblyDetails.innerHTML = `
+            <h2>Connecting the cables</h2>
+            <p>All cables should be clearly labeled, minus the ones that are obvious. Connect the 24 pin motherboard power cable and the CPU power cable into the motherboard. 
+            </p>
+            <p>
+                Connect your GPU cables to the GPU. Connect your fan cables to the correct "cha_fan" headers on your motherboard. 
+            </p>
+        `;
+    }
+
+    else if (step == "cooler") {
+        assemblyDetails.innerHTML = `
+            <h2>Installing the CPU Cooler</h2>
+            <p>
+                Before doing anything else, make sure you remove the protective plastic sticker from the bottom of the CPU cooler. Many people make the mistake of leaving it on and then wonder why they're overheating later. Squeeze out some thermal paste onto the CPU. Some prefer putting a pea-sized dot, others prefer making an X shape. Up to you. Position the cooler over your CPU and secure it based on the instructions in the manual. Connect the cable from the cooler into your "CPU_fan" header on the motherboard. 
+            </p>
+        `;
+    }
+       
+}            
+</script>
 </body>
 </html>
