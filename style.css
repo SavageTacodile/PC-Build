@@ -129,15 +129,16 @@ h2 {
     width: 40%;
     float: right;
 }
-.assemblyimages .image {
-    background: var(--placeholder);
-    color: var(--light-text);
-    min-height: 145px;
+.assemblyimages .assembly-image {;
+    width: 100%;
+    height: auto;
     margin-bottom: 20px;
     border-radius: 4px;
-    text-align: center;
-    padding: 20px;
-    font-size: 17px;
+    cursor: pointer;
+}
+
+.assembly-image.selected {
+    outline: 3px solid var(--accent);
 }
 /*troubleshooting*/
 .issues {
