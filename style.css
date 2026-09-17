@@ -180,7 +180,7 @@ h2 {
     float: left;
 }
 .btn:hover {
-    background: #4a4a4a;
+    background: var(--accent);
 }
 .issuedetails {
     background: var(--placeholder);
@@ -189,7 +189,7 @@ h2 {
     margin-top: 20px;
     min-height: 180px;
     border-radius: 6px;
-    text-align: center;
+    text-align: left;
     padding: 40px;
     font-size: 19px;
     line-height: 1.6;
@@ -228,9 +228,18 @@ h2 {
 }
 
 .maintenance-buttons button {
-    padding: 12px 20px;
+    background: var(--light-placeholder);
+    color: var(--light-text);
+    border: none;
+    border-radius: 8px;
+    padding: 16px 10px;
     font-size: 16px;
     cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.maintenance-buttons button:hover {
+    background: var(--accent);
 }
 
 #maintenance-box {
