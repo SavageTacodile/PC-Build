@@ -50,6 +50,7 @@ h2 {
     letter-spacing: 0.5px;
     margin-bottom: 20px;
     overflow: auto;
+    position: relative;
 }
 #header h1 {
     margin: 0;
@@ -62,8 +63,10 @@ h2 {
 #header img {
     width: 100px;
     height: auto;
-    float: left;
-    margin-right: 20px;
+    position: absolute;
+    left: 22px;
+    top: 50%;
+    transform: translateY(-50%;
 }
 /*home page pictures*/
 .homephotos {
