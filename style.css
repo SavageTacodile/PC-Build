@@ -114,6 +114,12 @@ h2 {
     font-size: 20px;
     padding: 16px;
 }
+
+.components::after {
+    content: "";
+    display: block;
+    clear: both;
+}
 /* assembly */
 .assemblylayout {
     display: flex;
