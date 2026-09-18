@@ -116,7 +116,9 @@ h2 {
 }
 /* assembly */
 .assemblylayout {
-    overflow: auto;
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
 }
 .assemblytext {
     background: var(--placeholder);
@@ -133,15 +135,18 @@ h2 {
     margin-top: 40px;
 }
 .assemblyimages {
-    width: 40%;
-    float: right;
+    width: 45%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    
 }
 
 .assembly-button {
-    display: block;
+    
     width: 100%;
     padding: 0;
-    margin-bottom: 20px;
+    margin: 0px;
     border: 3px solid transparent;
     border-radius: 4px;
     background: none;
@@ -151,8 +156,24 @@ h2 {
 .assembly-image {
     display: block;
     width: 100%;
-    height: auto;
+    height: 130px;
+    object-fit: cover;
     border-radius: 4px;
+}
+
+#assembly-details {
+    width: 55%;
+    background: var(--placeholder);
+    color: var(--light-text);
+    padding: 30px;
+    font-size: 18px;
+    line-height: 1.6;
+    border-radius: 4px;
+    min-height: 400px;
+}
+
+#assembly-details h2 {
+    margin-top: 0;
 }
 
 .assembly-button.selected {
