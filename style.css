@@ -41,7 +41,7 @@ h2 {
     margin-bottom: 180px;
 }
 
-#wrapper:a:not(.cta-button) {
+#wrapper a:not(.cta-button) {
     color: var(--accent);
     text-decoration: underline;
 }
