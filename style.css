@@ -318,6 +318,8 @@ h2 {
     #wrapper {
         width: 95%;
         padding: 15px;
+        margin-top: 90px;
+        margin-bottom: 90px;
     }
 
     #header {
