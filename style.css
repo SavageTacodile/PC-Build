@@ -58,7 +58,7 @@ h2 {
 
 #wrapper #maintenance-box a:hover,
 #wrapper .issuedetails a:hover,
-#warapper #assembly-details a:hover {
+#wrapper #assembly-details a:hover {
     color: var(--background);
 }
 /* ghead */
