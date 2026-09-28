@@ -218,12 +218,12 @@ h2 {
     margin-top: 0;
 }
 
-.assembly-button.selected {
-    border-color: var(--accent);
-}
-
 .assembly-button:hover {
     border-color: var(--placeholder);
+}
+
+.assembly-button.selected {
+    border-color: var(--accent);
 }
 
 .assembly-button:focus {
@@ -392,6 +392,14 @@ h2 {
     }
 
     .assembly-button {
+        width: 100%;
+    }
+
+    .assemblylayout {
+        flex-direction: column;
+    }
+
+    #assembly-details {
         width: 100%;
     }
 
