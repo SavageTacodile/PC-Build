@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build a Custom PC - Ask a Question</title>
+    <meta name="description" content="Ask a question about building, maintaining or troubleshooting your custom PC.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip-link" href="#wrapper">Skip to main content</a>
+<div id="header">
+    <a href="index.html">
+        <img src="logo.png" alt="PC Building Guide logo">
+    </a>
+    <h1>Ask a PC Question</h1>
+</div>
+<div id="wrapper">
+
+    <h2>Ask a Question About Your PC</h2>
+
+    <p>
+        If you're stuck on a component, a step in assembly, or a problem that won't right itself, fill out this form and let me know what's going on.
+    </p>
+
+    <div class="issuedetails">
+    <form id="question-form" novalidate>
+
+        <label for="name">Your name</label>
+        <input type="text" id="name" name="name" autocomplete="name" aria-describedby="name-error">
+        <span class="error" id="name-error"></span>
+
+        <label for="email">Your email</label>
+        <input type="email" id="email" name="email" autocomplete="email" aria-describedby="email-error">
+        <span class="error" id="email-error"></span>
+
+        <label for="topic">What is your question about?</label>
+        <select id="topic" name="topic" aria-describedby="topic-error">
+            <option value="">Choose a topic</option>
+            <option value="components">Components</option>
+            <option value="assembly">Assembly</option>
+            <option value="maintenance">Maintenance</option>
+            <option value="troubleshooting">Troubleshooting</option>
+        </select>
+        <span class="error" id="topic-error"></span>
+
+        <label for="question">Your question</label>
+        <textarea id="question" name="question" rows="5" aria-describedby="question-error"></textarea>
+        <span class="error" id="question-error"></span>
+
+        <button type="submit">Send question</button>
+    </form>
+
+    <p id="form-success" role="status"></p>
+    </div>
+
+    <p><a href="troubleshooting.html" class="cta-button">Check the Troubleshooting Guide →</a></p>
+</div>
+<hr>
+<div id="footer">
+    <p><b>PC Building Guide</b></p>
+    <p>
+        <a href="index.html">Home</a> |
+        <a href="components.html">Components</a> |
+        <a href="assembly.html">Assembly</a> |
+        <a href="maintenance.html">Maintenance</a> |
+        <a href="troubleshooting.html">Troubleshooting</a>
+    </p>
+</div>
+
+<script>
+var form = document.getElementById("question-form");
+var fields = ["name", "email", "topic", "question"];
+
+var messages = {
+    name: "Enter your name.",
+    email: "Enter a valid email address, like name@example.com.",
+    topic: "Choose your topic.",
+    question: "Enter at least 10 characters."
+};
+
+function isValid(id) {
+    var value = document.getElementById(id).value.trim();
+    if (id =="email") {
+        return /^\S+@\S+\.\S+$/.test(value);
+    }
+    if (id == "question") {
+        return value.length >= 10;
+    }
+    return value.length > 0;
+}
+
+function checkField(id) {
+    var ok = isValid(id);
+    var field = document.getElementById(id);
+    document.getElementById(id + "-error").textContent = ok ? "" : messages[id];
+    field.classList.toggle("invalid", !ok);
+    field.setAttribute("aria-invalid", ok ? "false" : "true");
+    return ok;
+}
+
+for (var i = 0; i < fields.length; i++) {
+    document.getElementById(fields[i]).addEventListener("blur", function () {
+        checkField(this.id);
+    });
+}
+
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    var firstInvalid = null;
+    for (var i = 0; i < fields.length; i++) {
+        if (!checkField(fields[i]) && firstInvalid === null) {
+            firstInvalid = fields[i];
+        }
+    }
+    var success = document.getElementById("form-success");
+    if (firstInvalid !== null) {
+        success.textContent= "";
+        document.getElementById(firstInvalid).focus();
+        return;
+    }
+    success.textContent = "Question sent. I'll get back to you soon!";
+    form.reset();
+});
+</script>
+</body>
+</html>
