@@ -303,11 +303,11 @@ h2 {
 #footer a {
     color: var(--darktext);
     text-decoration: none;
-    margin-left: 6px;
-    margin-right: 6px;
-    font-size: 18px;
+    margin-left: 3px;
+    margin-right: 3px;
+    font-size: 16px;
     display: inline-block;
-    padding: 10px 8px;
+    padding: 10px 4px;
 }
 #footer a:hover {
     text-decoration: underline;
