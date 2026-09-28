@@ -472,6 +472,10 @@ h2 {
     font-weight: 700;
 }
 
+#question-form label:first-child {
+    margin-top: 0;
+}
+
 #question-form input,
 #question-form select,
 #question-form textarea {
@@ -488,18 +492,27 @@ h2 {
 }
 
 #question-form .invalid {
-    border-color: #B00020;
+    border-color: #FFD1C9;
 }
 
-#question-form button.cta-button {
-    border: none;
-    cursor: pointer;
-    font-family: inherit;
+#question-form button {
+    background: var(--light-placeholder);
+    color: var(--light-text);
+    border: 2px solid var(--light-text);
+    border-radius: 8px;
+    padding: 16px 10px;
     font-size: 16px;
-    margin-top: 10px;
+    cursor: pointer;
+    width: 180px;
+    margin-top: 20px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.success {
-    color: var(--darktext);
+#question-form button:hover {
+    background: var(--accent);
+}
+
+#form-success {
     font-weight: 700;
 }
+
