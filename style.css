@@ -450,3 +450,42 @@ h2 {
 .skip-link:focus {
     top: 0;
 }
+
+/*contact*/
+#question-form label {
+    display: block;
+    margin-top: 18px;
+    font-weight: 700;
+}
+
+#question-form input,
+#question-form select,
+#question-form textarea {
+    display: block;
+    width: 100%;
+    margin-top: 6px;
+    padding: 10px;
+    font-family: inherit;
+    font-size: 16px;
+    color: var(--darktext);
+    background: white;
+    border: 2px solid var(--placeholder);
+    border-radius: 4px;
+}
+
+#question-form .invalid {
+    border-color: #B00020;
+}
+
+#question-form button.cta-button {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.success {
+    color: var(--darktext);
+    font-weight: 700;
+}
