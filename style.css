@@ -47,6 +47,20 @@ h2 {
 #wrapper a:not(.cta-button):hover {
     color: var(--header);
 }
+
+/*dark box links*/
+#wrapper #maintenance-box a,
+#wrapper .issuedetails a,
+#wrapper #assembly-details a {
+    color: var(--light-text);
+    text-decoration: underline;
+}
+
+#wrapper #maintenance-box a:hover,
+#wrapper .issuedetails a:hover,
+#warapper #assembly-details a:hover {
+    color: var(--background);
+}
 /* ghead */
 #header {
     background: var(--header);
