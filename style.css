@@ -232,6 +232,12 @@ h2 {
     margin-top: 0;
 }
 
+@media (min-width: 769px) {
+    #assembly-details {
+        min-height: 920px;
+    }
+}
+
 .assembly-button:hover {
     border-color: var(--placeholder);
 }
