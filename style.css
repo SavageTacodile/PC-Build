@@ -378,18 +378,25 @@ h2 {
     }
 
     #header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
         font-size: 24px;
         padding: 15px;
     }
 
     #header h1 {
         font-size: 24px;
+        margin: 0;
+        line-height: 1.2;
     }
 
     #header img {
+        position: static;
+        flex-shrink: 0;
         width: 70px;
         float: none;
-        margin: 0 auto 10px;
+        margin: 0;
     }
 
     /*home*/
