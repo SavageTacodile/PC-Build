@@ -124,5 +124,23 @@ form.addEventListener("submit", function (event) {
     form.reset();
 });
 </script>
+
+<script>
+    let lastScroll = 0;
+    const footer = document.getElementById('footer');
+
+    window.addEventListener('scroll', () => {
+        const current = window.scrollY;
+        const atBottom = window.innerHeight + current >= document.body.scrollHeight - 10;
+
+        if (current > lastScroll && current > 50 && !atBottom) {
+            footer.classList.add('hidden');
+        } else {
+            footer.classList.remove('hidden');
+        }
+        lastScroll = current;
+    }, { passive: true });
+</script>  
+    
 </body>
 </html>
