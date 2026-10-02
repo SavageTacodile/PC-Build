@@ -374,12 +374,12 @@ h2 {
     #wrapper {
         width: 95%;
         padding: 15px;
-        margin-top: 90px;
+        margin-top: 150px;
     }
 
     #header {
-        display: flex;
-        align-items: center;
+        display: flex !important;
+        align-items: center !important;
         gap: 10px;
         font-size: 24px;
         padding: 15px;
@@ -387,12 +387,14 @@ h2 {
 
     #header h1 {
         font-size: 24px;
-        margin: 0;
+        margin: 0 !important;
+        padding: 0;
+        text-align: left;
         line-height: 1.2;
     }
 
     #header img {
-        position: static;
+        position: static !important;
         flex-shrink: 0;
         width: 70px;
         float: none;
