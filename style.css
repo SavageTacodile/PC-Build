@@ -444,13 +444,39 @@ h2 {
     }
 
     /*footer*/
+    body {
+        padding-bottom: 60px;
+    }
+
     #footer {
-        padding: 15px;
+        padding: 6px 0;
+    }
+
+    #footer p:first-child {
+        display: none;
+    }
+
+    #footer p:has(a) {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        white-space: nowrap;
+        gap: 4px;
+        margin: 0;
+        padding: 0 10px;
+        font-size: 0;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+    #footer p:has(a)::-webkit-scrollbar {
+        display: none;
     }
 
     #footer a {
-        display: inline-block;
-        margin: 5px;
+        font-size: 14px;
+        margin: 0;
+        padding: 10px 8px;
+        flex-shrink: 0;
     }
 }
         
@@ -522,3 +548,11 @@ h2 {
     font-weight: 700;
 }
 
+/*footer hide on scroll*/
+#footer {
+    transition: transform 0.3s ease;
+}
+
+#footer.hidden {
+    transform: translateY(100%);
+}
