@@ -112,7 +112,7 @@ function showAssembly(step, selectedImage) {
         assemblyDetails.innerHTML = `
             <h2>Installing the CPU</h2>
             <p>
-                Before installing the CPU, look at your CPU cooler's instructions on mounting. You may have to do that first before anything else. It's a good practice to place the motherboard on top of the motherboard's box to work on it. This protects the underside from scratches. Open the CPU socket and find the little arrow mark on the border of it. Line the same arrow mark on your CPU with the arrow mark on the socket. GENTLY drop the CPU in. Don't force it. You shouldn't ever have to push on a CPU. Once it's lying in completely flat, close the retention arm to secure it in the socket.
+                Before installing the CPU, look at your CPU cooler's instructions on mounting. You may have to do that first before anything else. It's a good practice to place the motherboard on top of the motherboard's box to work on it. This protects the underside from scratches. Open the CPU socket and find the little arrow mark on the border of it. Line up the same arrow mark on your CPU with the arrow mark on the socket. GENTLY drop the CPU in. Don't force it. You shouldn't ever have to push on a CPU. Once it's lying in completely flat, close the retention arm to secure it in the socket.
             </p>
         `;
     }
@@ -130,7 +130,7 @@ function showAssembly(step, selectedImage) {
         assemblyDetails.innerHTML = `
             <h2>Installing the Motherboard</h2>
             <p>
-                The first step is to make sure the motherboard standoffs in the chassis are in the correct position. Each standoff should match a screw hole on the edges of the motherboard. Your motherboard may have come with an I/O shield, a flat piece of metal that lines up with the rear ports on the motherboard. Place this into the rear of the case. Next, carefully lower the motherboard in the case and line it up with the standoffs. Use the provided screws to screw in the motherboard into the standoffs. Once your motherboard is in, I would take this time to connect your case cables to the motherboard before moving on to the GPU. Follow the instructions in your motherboard manual to get the right ones where they need to go.
+                The first step is to make sure the motherboard standoffs in the chassis are in the correct position. Each standoff should match a screw hole on the edges of the motherboard. Your motherboard may have come with an I/O shield, a flat piece of metal that lines up with the rear ports on the motherboard. Place this into the rear of the case. Next, carefully lower the motherboard in the case and line it up with the standoffs. Use the provided screws to secure the motherboard to the standoffs. Once your motherboard is in, I would take this time to connect your case cables to the motherboard before moving on to the GPU. Follow the instructions in your motherboard manual to get the right ones where they need to go.
             </p>
         `;
     }
@@ -147,10 +147,10 @@ function showAssembly(step, selectedImage) {
     else if (step == "cables") {
         assemblyDetails.innerHTML = `
             <h2>Connecting the Cables</h2>
-            <p>All cables should be clearly labeled, minus the ones that are obvious. Connect the 24 pin motherboard power cable and the CPU power cable into the motherboard. 
+            <p>All cables should be clearly labeled, minus the ones that are obvious. Connect the 24-pin motherboard power cable and the CPU power cable into the motherboard. If you plan on messing around with overclocking, use both CPU cables. 
             </p>
             <p>
-                Connect your GPU cables to the GPU. Connect your fan cables to the correct "cha_fan" headers on your motherboard. 
+                Connect your GPU cables to the GPU. Connect your fan cables to the correct "CHA_FAN" headers on your motherboard. 
             </p>
         `;
     }
@@ -159,7 +159,7 @@ function showAssembly(step, selectedImage) {
         assemblyDetails.innerHTML = `
             <h2>Installing the CPU Cooler</h2>
             <p>
-                Before doing anything else, make sure you remove the protective plastic sticker from the bottom of the CPU cooler. Many people make the mistake of leaving it on and then wonder why they're overheating later. Squeeze out some thermal paste onto the CPU. Some prefer putting a pea-sized dot, others prefer making an X shape. Up to you. Position the cooler over your CPU and secure it based on the instructions in the manual. Connect the cable from the cooler into your "CPU_fan" header on the motherboard. 
+                Before doing anything else, make sure you remove the protective plastic sticker from the bottom of the CPU cooler. Many people make the mistake of leaving it on and then wonder why they're overheating later. Squeeze out some thermal paste onto the CPU. Some prefer putting a pea-sized dot, others prefer making an X shape. Up to you. Position the cooler over your CPU and secure it based on the instructions in the manual. Connect the cable from the cooler into your "CPU_FAN" header on the motherboard. 
             </p>
         `;
     }
