@@ -39,6 +39,10 @@ h2 {
     margin-top: 120px;
 }
 
+#wrapper:focus (
+    outline: none;
+}
+
 #wrapper a:not(.cta-button) {
     color: var(--accent);
     text-decoration: underline;
