@@ -20,20 +20,21 @@
     <h2>Common PC Problems</h2>
     
     <div class="issues">
-        <button class="btn" onclick="showIssue('boot')">PC won't boot</button>
-        <button class="btn" onclick="showIssue('signal')">No signal</button>
-        <button class="btn" onclick="showIssue('overheating')">Overheating</button>
-        <!--fill in mmore buttons -->
+        <button type="button" class="btn" onclick="showIssue('boot')">PC won't boot</button>
+        <button type="button" class="btn" onclick="showIssue('signal')">No signal</button>
+        <button type="button" class="btn" onclick="showIssue('overheating')">Overheating</button>
+        <button type="button" class="btn" onclick="showIssue('crashes')">Random crashes</button>
+        <button type="button" class="btn" onclick="showIssues('noise')">Loud fans</button>
     </div>
     
-    <div class="issuedetails" id="issue-details">
+    <div class="issuedetails" id="issue-details" aria-live="polite">
         <h2>Troubleshooting Guide</h2>
 
         <p>
             Select an issue above to see possible causes. I will also list steps you can take to solve them.
         </p>
     </div>
-    <p><a href="contact.html" class="cta-button">Still stuck? You can ask me a question if you can't find it here. →</a></p>
+    <p><a href="contact.html" class="cta-button">Still stuck? Ask me a question →</a></p>
 </main>
 <hr>
     
@@ -113,6 +114,37 @@ function showIssue(issue) {
             </ol>
         `;
     }
+
+    else if (issue == "crashes") {
+        issueDetails.innerHTML = `
+            <h2>Random Restarts or Crashes</h2>
+            <p>
+                If your PC freezes, crashes, or restarts on its own:
+            </p>
+            <ol>
+                <li>Check the temperatures of your CPU and GPU. They may be overheating.</li>
+                <li>Update Windows and your GPU drivers.</li>
+                <li>Check that the RAM is fully seated in the slots.</li>
+                <li>Run Windows Memory Diagnostic to see if your RAM needs to be replaced.</li>
+            </ol>
+        `;
+    }
+
+    else if (issue == "noise") {
+        issueDetails.InnerHTML = `
+            <h2>Loud Fans</h2>
+            <p>
+                Fans can be loud when they spin fast so that they keep your components cool.
+            </p>
+            <ol>
+                <li>If you've had your PC for a while, dust can build up. Clean your fans.</li>
+                <li>Check for overheating.</li>
+                <li>Make sure cables aren't touching the fan blades.</li>
+                <li>Adjust your fan curves in whatever software you are using or the BIOS.</li>
+            </ol>
+        `;
+    }
+        
 
     
                 
