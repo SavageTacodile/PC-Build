@@ -344,6 +344,7 @@ h2 {
 #maintenance-box td {
     padding: 10px;
     text-align: left;
+    border: 1px solid var(--light-text);
 }
  
 /*mobile*/
