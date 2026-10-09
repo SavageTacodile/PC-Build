@@ -24,17 +24,18 @@
     </p>
 
     <div class="issuedetails">
+    <p class="required-note"><span class="required">*</span> Required field</p>
     <form id="question-form" novalidate>
 
-        <label for="name">Your name</label>
+        <label for="name">Your Name <span class="required" aria-hidden="true">*</span></label>
         <input type="text" id="name" name="name" autocomplete="name" aria-describedby="name-error">
         <span class="error" id="name-error"></span>
 
-        <label for="email">Your email</label>
+        <label for="email">Your Email <span class="required" aria-hidden="true">*</span></label>
         <input type="email" id="email" name="email" autocomplete="email" aria-describedby="email-error">
         <span class="error" id="email-error"></span>
 
-        <label for="topic">What is your question about?</label>
+        <label for="topic">What is your question about? <span class="required" aria-hidden="true">*</span></label>
         <select id="topic" name="topic" aria-describedby="topic-error">
             <option value="">Choose a topic</option>
             <option value="components">Components</option>
@@ -44,7 +45,7 @@
         </select>
         <span class="error" id="topic-error"></span>
 
-        <label for="question">Your question</label>
+        <label for="question">Your Question <span class="required" aria-hidden="true">*</span></label>
         <textarea id="question" name="question" rows="5" aria-describedby="question-error"></textarea>
         <span class="error" id="question-error"></span>
 
