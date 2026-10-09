@@ -523,6 +523,16 @@ h2 {
     border-color: #FFD1C9;
 }
 
+.required {
+    color: #FFD1C9;
+    font-weight: 700;
+}
+
+.required-note {
+    font-size: 16px;
+    margin: 0 0 10px 0;
+}
+
 #question-form button {
     background: var(--light-placeholder);
     color: var(--light-text);
