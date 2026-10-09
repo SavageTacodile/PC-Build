@@ -545,7 +545,7 @@ h2 {
 }
 
 #question-form .invalid {
-    border-color: #FFD1C9;
+    border-color: #B3261E;
 }
 
 #question-form button {
@@ -574,4 +574,12 @@ h2 {
     transition: transform 0.3s ease;
 }
 
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+}
 
+#footer:focus-within {
+    transform: none;
+}
