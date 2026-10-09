@@ -74,7 +74,7 @@ h2 {
     padding: 22px;
     font-size: 32px;
     font-weight: 800;
-    font-family: Georgia, 'Times New Roman', serif; /* need to find new fonts*/
+    font-family: Georgia, 'Times New Roman', serif;
     letter-spacing: 0.5px;
     position: fixed;
     top: 0;
@@ -112,20 +112,6 @@ h2 {
     border-radius: 6px;
     margin: 15px;
     border: 1px solid black;
-}
-
-.homephotos .photo {
-    background: var(--placeholder);
-    color: var(--darktext);
-    width: 290px;
-    height: 380px;
-    border-radius: 6px;
-    float: left;
-    margin: 15px;
-    padding: 20px;
-    border: 1px solid black;/*do i like borders? */
-    display: inline-block;
-    text-align: center;
 }
 
 /*cta*/
@@ -181,20 +167,7 @@ h2 {
     gap: 30px;
     align-items: flex-start;
 }
-.assemblytext {
-    background: var(--placeholder);
-    color: var(--light-text);
-    width: 55%;
-    float: left;
-    min-height: 640px;
-    padding: 30px;
-    font-size: 18px;
-    line-height: 1.6;
-    border-radius: 4px;
-}
-.assemblytext .tips {
-    margin-top: 40px;
-}
+
 .assemblyimages {
     width: 45%;
     display: grid;
@@ -293,7 +266,7 @@ h2 {
     background: var(--footer);
     text-align: center;
     padding: 18px 32px;
-    
+    transition: transform 0.3s ease;
     clear: both;
     font-size: 16px;
     position: fixed;
@@ -568,11 +541,6 @@ h2 {
 
 #form-success {
     font-weight: 700;
-}
-
-/*footer hide on scroll*/
-#footer {
-    transition: transform 0.3s ease;
 }
 
 a:focus-visible,
